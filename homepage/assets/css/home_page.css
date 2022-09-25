@@ -62,18 +62,19 @@ ol li {
 
 a {
     text-decoration: none;
-}
-
-a:visited {
-    color: var(--primary-color);
-}
-
-a:hover {
     color: var(--primary-light-color)
 }
 
+a:visited {
+    color: var(--secondary-light-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
 a:active {
-    color: var(--secondary-color);
+    color: var(--off-white);
 }
 
 .section-title {
