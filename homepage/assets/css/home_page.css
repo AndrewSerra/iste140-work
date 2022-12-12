@@ -67,6 +67,7 @@ ol li {
 a {
     text-decoration: none;
     color: var(--primary-light-color);
+    border-bottom: 1px dashed var(--primary-light-color);
 }
 
 a:visited {
@@ -120,7 +121,9 @@ section.info-section .course-description > .section-title {
     padding-left: 10px;
 }
 
-.course-data-group  :not(.section-title) {
+.course-data-group ol,
+.course-data-group ul,
+.course-data-group li {
     padding-left: 8px;
 }
 
