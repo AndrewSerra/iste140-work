@@ -38,6 +38,10 @@ footer {
     margin-top: 20px;
 }
 
+footer a:visited {
+    color: var(--secondary-light-color);
+}
+
 nav, footer {
     display: flex;
     align-items: center;
@@ -62,19 +66,15 @@ ol li {
 
 a {
     text-decoration: none;
-    color: var(--primary-light-color)
+    color: var(--primary-light-color);
 }
 
 a:visited {
-    color: var(--secondary-light-color);
+    color: var(--tertiary-color);
 }
 
 a:hover {
     color: var(--primary-color);
-}
-
-a:active {
-    color: var(--off-white);
 }
 
 .section-title {
