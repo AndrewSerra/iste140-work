@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="http://solace.ist.rit.edu/~acs8929/140/project/assets/css/main.css" rel="stylesheet">
+        <title>Andrew Serra - Examples</title>
+        <script src="https://kit.fontawesome.com/8af02a0b28.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="container flex">
+                <div class="brand">
+                    <h1>Motivational Tech</h1>
+                </div>
+                <div class="nav-list-trigger icon" onclick="handle_hamburger_click(event)">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="nav-list-menu-wrapper container">
+                    <ul class="nav-list-menu">
+                        <li class="nav-list-menu-item">
+                            <a href="http://solace.ist.rit.edu/~acs8929/140/project/index.html">
+                                <i class="icon flex fa-solid fa-house"></i>
+                                <span class="nav-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-list-menu-item">
+                            <a href="http://solace.ist.rit.edu/~acs8929/140/project/story.html">
+                                <i class="icon flex fa-solid fa-book"></i>
+                                <span class="nav-text">The Story</span>
+                            </a>
+                        </li>
+                        <li class="nav-list-menu-item active">
+                            <a href="http://solace.ist.rit.edu/~acs8929/140/project/examples.html">
+                                <i class="icon flex fa-solid fa-gamepad"></i>
+                                <span class="nav-text">Examples</span>
+                            </a>
+                        </li>
+                        <li class="nav-list-menu-item">
+                            <a href="http://solace.ist.rit.edu/~acs8929/140/project/resources.html">
+                                <i class="icon flex fa-solid fa-bookmark"></i>
+                                <span class="nav-text">Resources</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </nav>
+        <main>
+            <div>
+                <section>
+                    <h2>Real Life Examples</h2>
+                    <div class="card">
+                        <h3 class="heading">Quora/Stack Overflow/Reddit: Upvotes for Points</h3>
+                        <div class="image-container flex">
+                            <figure>
+                                <img src="./assets/img/quora_gamification.png">
+                                <figcaption>
+                                    Quora Implementation of Gamification<var><sup>[4]</sup></var>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/so_gamification.png">
+                                <figcaption>
+                                    Stack Overflow Implementation of Gamification<var><sup>[3]</sup></var>
+                                </figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/reddit_gamification.png">
+                                <figcaption>
+                                    Reddit Implementation of Gamification<var><sup>[5]</sup></var>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <p>
+                            The pattern that has dominated the technology industry has been upvotes or likes on specific 
+                            content. The more positive reinforcement is done toward the content, the more popularity and 
+                            view it will receive.
+                        </p>
+                        <p>
+                            This can be considered extrinsic motivation as you can gain status through rewards and 
+                            punishments. A more technical name for the technique used on these platforms is called 
+                            intermittent reinforcement. This is done by providing rewards at irregular intervals. Giving 
+                            badges, upvotes, points, downvotes, dislikes, status names, and more are all similar applications 
+                            of the same concept.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 class="heading">Free Rice: Random act of kindness</h3>
+                        <p>
+                            Free Rice is a game where one can practice English vocabulary by selecting the word in the options 
+                            that have the same meaning as the given word. In return, the user receives… Nothing. This is not 
+                            exactly correct, anyone who plays will see a bowl of rice getting more and more full as correct 
+                            answers are selected. Then for each answer, the user will be automatically donating a certain amount 
+                            of rice to people who need it. 
+                        </p>
+                        <embed 
+                            title="Free Rice Website"
+                            src="http://www.freerice.com" 
+                            style="width: 100%;min-height: 500px;">
+                        <p>
+                            There is no external motivator except for social help, and the satisfaction of being a part of 
+                            something bigger. This is the core aim of any game. You become a collaborator to the community who 
+                            is playing the same game, practice your skills and donate rice. This meaningful act is the intrinsic 
+                            motivator in this game.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="container flex">
+                <span>Created by Andrew Serra, 2022</span>
+            </div>
+        </footer>
+        <script src="./assets/js/nav_dropdown.js" type="text/javascript"></script>
+    </body>
+</html>

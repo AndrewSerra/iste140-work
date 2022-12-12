@@ -1,0 +1,312 @@
+:root {
+    --primary-color: #2f394d;
+    --secondary-color: #758ecd;
+    --tertiary-color: #fc9e4f;
+    --area-color: #f0f6f6;
+    --shadow: #dedede;
+    
+    --white: #f2f2f2;
+
+    --quote-bg: lightblue;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--area-color);
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: left;
+}
+
+span, figcaption, p, a, div, li {
+    font-family: 'Manrope', sans-serif;
+}
+
+blockquote {
+    background-color: var(--quote-bg);
+    padding: 7px;
+    margin: 20px 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 90%;
+    min-width: 315px;
+    min-height: calc(100vh - 110px);
+    margin: 15px auto 40px auto;
+    max-width: 750px;
+}
+
+main:not(h1),
+main:not(h2),
+main:not(h3),
+main:not(h4),
+main:not(h5),
+main:not(h6) {
+    text-align: justify;
+}
+
+main > section {
+    width: unset;
+}
+
+ol, ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 1px dashed var(--tertiary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+hr {
+    border: 0;
+    background-color: var(--tertiary-color);
+    height: 2px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.image-container {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: inherit;
+}
+
+figure {
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+figure > img {
+    max-width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* The whole navbar */
+nav#navbar {
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 10px 1px var(--shadow);
+}
+
+/* Nav content container */
+nav#navbar > .container {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav#navbar .nav-list-menu .nav-list-menu-item {
+    border-radius: 5px;
+}
+
+nav#navbar .nav-list-menu .nav-list-menu-item a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding: 2px 5px;
+    border-bottom: 0;
+}
+
+nav#navbar .nav-list-menu .nav-list-menu-item.active {
+    background-color: var(--tertiary-color);
+}
+
+.card {
+    border-radius: 5px;
+    background-color: var(--shadow);
+    padding: 12px 30px;
+    margin-top: 12px;
+}
+
+.resource-list {
+    counter-reset: item;
+}
+
+.resource-list li {
+    text-overflow: ellipsis;
+}
+
+.resource-list li::before {
+    counter-increment: item;
+    content: "[" counter(item) "]";
+}
+
+.resource-list li:not(:last-of-type) {
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+footer .container {
+    padding: 10px 0;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+@media screen and (max-width: 967px) {
+    /* Actual nav menu */
+    nav#navbar .nav-list-menu-wrapper {
+        display: none;
+        position: absolute;
+        width: inherit;
+        background-color: var(--white);
+        box-shadow: 0px 2px 7px 0px var(--shadow);
+        border-top: 2px solid var(--secondary-color);
+        border-bottom: 2px solid var(--secondary-color);
+    }
+
+    /*  Nav Dropdown */
+    nav#navbar .nav-list-menu-wrapper.active {
+        display: block;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item.active {
+        border-radius: 0;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item:not(:last-of-type) {
+        margin-bottom: 5px;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item a .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item a .nav-text {
+        text-indent: 12px;
+        flex: 1 1;
+    }
+    #content-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    blockquote {
+        padding: 15px;
+    }
+    figure {
+        margin-left: unset;
+        margin-right: unset;
+    }
+    nav#navbar .nav-list-menu-wrapper {
+        position: relative;
+        width: unset;
+    }
+    nav#navbar .nav-list-menu-wrapper .nav-list-menu {
+        display: inline;
+    }
+    nav#navbar .nav-list-trigger {
+        display: none;
+    }
+    nav#navbar .nav-list-menu-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item {
+        display: inline-block;
+        padding: 5px 7px;
+    }
+
+    nav#navbar .nav-list-menu .nav-list-menu-item.active:hover,
+    nav#navbar .nav-list-menu .nav-list-menu-item:hover {
+        background-color: var(--tertiary-color);
+    }
+
+    nav#navbar .nav-list-menu-wrapper .icon {
+        display: none;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    #content-nav {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    #content-nav .content-nav-item {
+        padding: 15px 12px;
+        font-size: 15px;
+        text-align: left;
+        border-radius: 5px;
+    }
+
+    #content-nav .content-nav-item:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+
+    #content-nav .content-nav-item:hover {
+        background-color: var(--tertiary-color);
+    }
+
+    #content-container {
+        flex: 1 1;
+    }
+
+    #content-container section {
+        display: none;
+    }
+
+    #content-container section.active {
+        display: block;
+    }
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ICE 19</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: tan;
+            margin: 20px;
+        }
+        header {
+            vertical-align: middle;
+            /* display: block; */
+        }
+        img {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        main {
+            clear: both;
+        }
+        .ar { 
+            text-align: right; 
+            vertical-align: top;
+            font-weight: bold;
+        }
+        form {
+            width: 35vw;
+        }
+        form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 7px;
+        }
+        form .form-row #form-buttons {
+            grid-column: 2 / 3;
+        }
+        .block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+	<header>
+	    <img src="BillyGoat.png" alt="Billy Goat">
+	    <h1>Billy the Goat's Pizza</h1>
+	</header>
+	<main>
+		<p>
+			Welcome! We are pleased to serve you! For quick delivery, please fill out all fields below. You can expect your piping hot pizza within 30 minutes after submission.
+		</p>
+
+		<!-- Enter your HTML code below this line to create the form -->
+        <form action="http://webdevbasics.net/scripts/demo.php" method="post" name="orderForm">
+            <div class="form-row">
+                <label for="name" class="ar">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-row">
+                <label for="address" class="ar">Address:</label>
+                <textarea id="address" name="address"></textarea>
+            </div>
+            <div class="form-row">
+                <label for="acc_tb" class="ar">DCE account for Tiger Bucks:</label>
+                <input type="text" id="acc_tb" name="acc_tb">
+            </div>
+            <div class="form-row">
+                <label for="acc_pwd_tb" class="ar">DCE password for Tiger Bucks:</label>
+                <input type="password" id="acc_pwd_tb" name="acc_pwd_tb">
+            </div>
+            <div class="form-row">
+                <label for="email" class="ar">Email Address:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-row">
+                <label for="phone_num" class="ar">Phone Number:</label>
+                <input type="tel" id="phone_num" name="phone_num">
+            </div>
+            <div class="form-row">
+                <span class="ar">Size:</span>
+                <div class="radio-wrapper">
+                    <input type="radio" id="size-small" name="size" value="Small">
+                    <label for="size-small">Small</label><br>
+                    <input type="radio" id="size-medium" name="size" value="Medium">
+                    <label for="size-medium">Medium</label><br>
+                    <input type="radio" id="size-large" name="size" value="Large">
+                    <label for="size-large">Large</label><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <span class="ar">Toppings:</span>
+                <div class="radio-wrapper">
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    <label for="pepperoni">Pepperoni</label><br>
+                    <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                    <label for="sausage">Sausage</label><br>
+                    <input type="checkbox" id="mushroom" name="toppings" value="mushroom">
+                    <label for="mushroom">Mushroom</label><br>
+                    <input type="checkbox" id="olives" name="toppings" value="olives">
+                    <label for="olives">Olives</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="crust" class="ar">Crust:</label>
+                <select name="crust" id="crust">
+                    <option value="thin">Thin</option>
+                    <option value="hand_tossed">Hand Tossed</option>
+                    <option value="deep_dish">Deep Dish</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div id="form-buttons">
+                    <button type="submit">Submit Order</button>
+                    <button type="reset">Clear Order</button>
+                </div>
+            </div>
+        </form>
+		<!-- Enter your HTML code above this line to create the form -->
+	</main>
+</body>
+</html>
